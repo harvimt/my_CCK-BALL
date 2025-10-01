@@ -60,7 +60,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
   &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B                                          &kp N    &kp M   &kp COMMA &kp DOT  &kp UP  &kp FSLH
 //├────────┼────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-  &kp LCTRL &kp LWIN &kp LALT                   &kp DEL  &kp SPACE  &mo 1     &mo 2  &kp SPACE &kp ENTER                  &kp LEFT &kp DOWN &kp RIGHT
+  &kp LCTRL &kp LWIN &kp LALT                   &kp DEL  &kp SPACE  &mo 1    &mo 2  &kp SPACE  &kp ENTER                  &kp LEFT &kp DOWN &kp RIGHT
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                              &inc_dec_kp PG_UP PG_DN>;
@@ -68,51 +68,71 @@
 
         F_layers {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8  &kp F9  &kp F10  &kp F11
-&kp A    &none   &none   &none   &none   &trans  &none      &none      &none   &trans  &trans   &trans
-&trans   &none   &none   &none   &none   &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &none   &none      &none      &trans  &trans  &none    &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans   &trans
+//┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
+   &kp F12   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                                         &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp F11
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+   &kp A     &none    &none    &none    &none    &trans                                         &none    &none    &none    &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+   &trans    &none    &none    &none    &none    &trans                                       &mkp LCLK &mkp RCLK &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+   &trans    &trans   &trans   &trans   &trans   &none                                          &none     &none   &trans   &trans   &none    &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+   &trans    &trans   &trans                     &trans   &trans   &trans    &mkp LCLK &mkp RCLK &trans                    &trans   &trans   &trans
+//└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                       &inc_dec_kp PG_UP PG_DN>;
         };
 
         BT_layers {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &trans  &trans  &trans  &kp W
-&trans  &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans        &trans        &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans
+//┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
+&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                         &trans   &trans   &trans   &trans   &trans   &kp W
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+&trans &bt BT_CLR_ALL &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans &bt BT_CLR &trans   &trans                                       &bt BT_NXT &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
+//└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                     &inc_dec_kp PG_UP PG_DN>;
         };
 
         scroll-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+//┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
+//└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                      &inc_dec_kp PG_UP PG_DN>;
         };
 
         snipe-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+//┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
+//├────────┼────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+    &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
+//└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-
-            sensor-bindings = <&scroll_vertical_encoder>,   // Encoder 1: Scroll up and down
-                             <&scroll_horizontal_encoder>;  // Encoder 2: Scroll left and right
+            sensor-bindings = <&scroll_vertical_encoder>,                                       <&scroll_horizontal_encoder>;
+            // Encoder 1: Scroll up and down                                                   Encoder 2: Scroll left and right
         };
     };
 };
