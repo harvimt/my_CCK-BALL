@@ -27,7 +27,7 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    // 上下滚动编码器行为
+    // Up/down scrolling encoder behavior
     scroll_vertical_encoder: scroll_vertical_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -35,7 +35,7 @@
         tap-ms = <100>;
     };
 
-    // 左右滚动编码器行为
+    // Scroll Encoder Behavior Left and Right
     scroll_horizontal_encoder: scroll_horizontal_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -106,8 +106,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_vertical_encoder>,   // 编码器1：上下滚动
-                             <&scroll_horizontal_encoder>;  // 编码器2：左右滚动
+            sensor-bindings = <&scroll_vertical_encoder>,   // Encoder 1: Scroll up and down
+                             <&scroll_horizontal_encoder>;  // Encoder 2: Scroll left and right
         };
     };
 };
