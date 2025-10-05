@@ -71,7 +71,7 @@
 &kp LCTRL &kp LWIN &kp LALT        &mt LSHFT BSPC  &lt 1 ENTER  &mt LALT DEL &mt ENTER BSPC &lt 2 SPACE &kp SPACE       &kp LALT &kp DOWN &kp RIGHT
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = &inc_dec_kp C_VOL_UP C_VOL_DN>,                                       <&scroll_vertical_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };3
 
         F_layers {
@@ -88,7 +88,7 @@
    &trans    &trans   &trans                     &trans   &trans   &trans    &mkp LCLK &mkp RCLK &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>,                                              <&scroll_vertical_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         BT_layers {
@@ -105,7 +105,7 @@
     &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>,                                              <&scroll_vertical_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         scroll-layers {
@@ -122,7 +122,7 @@
     &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>,                                              <&scroll_vertical_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         snipe-layers {
