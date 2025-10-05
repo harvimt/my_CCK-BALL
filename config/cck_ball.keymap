@@ -71,7 +71,7 @@
 &kp LCTRL &kp LWIN &kp LALT        &mt LSHFT BSPC  &lt 1 ENTER  &mt LALT DEL &mt ENTER BSPC &lt 2 SPACE &kp SPACE       &kp LALT &kp DOWN &kp RIGHT
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = &inc_dec_kp C_VOL_UP C_VOL_DN                                       <&scroll_horizontal_encoder>;
+        sensor-bindings = &inc_dec_kp C_VOL_UP C_VOL_DN,                                       <&scroll_horizontal_encoder>;
         };3
 
         F_layers {
@@ -79,33 +79,33 @@
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
    &kp ESC  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                                         &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &mt F12 BSPC
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-   &trans     &trans    &    &trans    &trans    &trans                                       &mkp MCLK    &kp N7    &kp N8    &kp N9  &kp FSLH   &trans
+   &trans     &trans    &    &trans    &trans    &trans                                       &mkp MCLK  &kp N7  &kp N8   &kp N9  &kp FSLH  &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-   &trans    &trans  &lt 4 S    &trans  &lt 3 F  &trans                                       &mkp RCLK &kp N4  &kp N5   &kp N6   &kp LS(EQUAL)   &kp LS(SEMI)
+   &trans    &trans  &lt 4 S    &trans  &lt 3 F  &trans                                       &mkp RCLK &kp N4  &kp N5   &kp N6   &kp LS(EQUAL) &kp LS(SEMI)
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-   &trans    &trans   &trans   &trans   &trans   &trans                                          &none    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
+   &trans    &trans   &trans   &trans   &trans   &trans                                        &trans    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
    &trans    &trans   &trans                     &trans   &trans   &trans    &mkp LCLK &mkp RCLK &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                              <&scroll_horizontal_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN,                                              <&scroll_horizontal_encoder>;
         };
 
         BT_layers {
             bindings = <
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
-&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                         &trans   &trans   &kp UP   &trans   &trans   &kp W
+&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                         &trans   &trans   &trans   &trans   &trans   &kp BSPC
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
     &trans   &trans   &trans   &trans   &trans   &trans                                        &kp F5  &kp F10 &kp UP &kp F11 &kp PSCRN   &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
 &trans &bt BT_CLR_ALL &trans   &trans   &trans   &trans                                        &kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans   &trans   &trans &bt BT_CLR &trans   &trans                                       &bt BT_NXT &kp PG_DN &kp PG_UP   &trans   &trans   &trans
+    &trans   &trans   &trans &bt BT_CLR &trans   &trans                                       &trans &kp PG_DN &kp PG_UP   &trans   &trans   &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
     &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                              <&scroll_horizontal_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN,                                              <&scroll_horizontal_encoder>;
         };
 
         scroll-layers {
@@ -122,7 +122,7 @@
     &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN                                              <&scroll_horizontal_encoder>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN,                                              <&scroll_horizontal_encoder>;
         };
 
         snipe-layers {
