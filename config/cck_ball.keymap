@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1600 // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 12   // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -57,7 +57,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
+        qwerty {
             bindings = <
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
    &kp ESC   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                                         &kp N6   &kp N7   &kp N8   &kp N9   &kp N0  &kp BSPC
@@ -74,14 +74,14 @@
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        F_layers {
+        f_layers {
             bindings = <
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
    &kp ESC  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                                         &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &mt F12 BSPC
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &trans    &trans  &trans   &trans   &trans   &trans                                        &mkp MCLK  &kp N7  &kp N8   &kp N9  &kp FSLH  &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-   &trans    &trans  &lt 4 S    &trans  &lt 3 F  &trans                                       &mkp RCLK &kp N4  &kp N5   &kp N6   &kp LS(EQUAL) &kp LS(SEMI)
+   &trans    &trans  &lt 4 S    &trans  &lt 3 F  &trans                                       &mkp RCLK &kp N4  &kp N5   &kp N6   &kp PLUS &kp COLON
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &trans    &trans   &trans   &trans   &trans   &trans                                        &trans    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
@@ -108,7 +108,7 @@
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        scroll-layers {
+        scroll_layers {
             bindings = <
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
     &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
@@ -125,7 +125,7 @@
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        snipe-layers {
+        snipe_layers {
             bindings = <
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
     &trans   &trans   &trans   &trans   &trans   &trans                                         &trans   &trans   &trans   &trans   &trans   &trans
