@@ -10,7 +10,7 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>;};
 
-// &mmv_input_listener { input-processors = <&zip_temp_layer 1 400>;};
+&mmv_input_listener { input-processors = <&zip_temp_layer 1 400>;};
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
@@ -75,7 +75,7 @@
 &mt LCTRL LWIN &kp LWIN &kp LALT      &mt LSHFT BSPC &lt 1 ENTER  &mt LALT DEL &mkp LCLK &lt 2 SPACE &kp SPACE             &kp LALT &kp DOWN &kp RIGHT
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vol_encoder>;
+        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
         };
 
         F_layers {
@@ -92,7 +92,7 @@
    &trans    &trans   &trans                  &trans &trans &bootloader    &mkp LCLK &mkp RCLK &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vol_encoder>;
+        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
         };
 
         BT_layers {
@@ -109,7 +109,7 @@
     &trans   &trans   &trans                  &trans &mt LCTRL SPACE &trans &bootloader &trans  &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vol_encoder>;
+        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
         };
 
         scroll-layers {
@@ -126,7 +126,7 @@
     &trans   &trans   &trans                     &trans   &trans   &trans     &trans   &trans   &trans                     &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vol_encoder>;
+        sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
         };
 
         snipe-layers {
@@ -143,7 +143,7 @@
     &trans   &trans   &trans &mt LSHFT SPACE &mt LCTRL BSPC &mt LS(LCTRL) DEL &trans   &trans   &kp RPAR                   &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
-            sensor-bindings = <&scroll_vol_encoder>, <&scroll_vol_encoder>;
+            sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
             // Encoder 1: Scroll up and down                                                   Encoder 2: Scroll left and right
         };
     };
