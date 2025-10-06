@@ -44,7 +44,7 @@
                  <&macro_press &kp LSHFT>,
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
-                 <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT>;
+                 <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT &kp ENTER>;
                 
         };
     };
@@ -55,19 +55,19 @@
         compatible = "zmk,combos";
         combo_test {
             timeout-ms = <17>;
-            key-positions = <1 7>; 
-            layers = <0>;
-            bindings = <&kp O>;
-        };
-        combo_str {
-            timeout-ms = <17>;
-            key-positions = <0 2>;
+            key-positions = <0 7>;
             layers = <0>;
             bindings = <&send_str>;
         };
+        // combo_str {
+        //     timeout-ms = <17>;
+        //     key-positions = <0 2>;
+        //     layers = <0>;
+        //     bindings = <&send_str>;
+        // };
         combo_ctrl_bsp {
             timeout-ms = <17>;
-            key-positions = <15 16>;
+            key-positions = <0 3>;
             layers = <1>;
             bindings = <&kp LC(BSPC)>;
         };
