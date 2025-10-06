@@ -61,7 +61,6 @@
         // };
     };
 
-{
     combos {
         compatible = "zmk,combos";
         combo_str {
@@ -83,7 +82,7 @@
             bindings = <&kp LC(BSCP)>;
         };
     };
-};
+
 
     keymap {
         compatible = "zmk,keymap";
