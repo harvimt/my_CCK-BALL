@@ -35,6 +35,7 @@
 };
 
 / {
+    // Up/down scrolling encoder behavior
     scroll_vertical_encoder: scroll_vertical_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -42,14 +43,13 @@
         tap-ms = <100>;
     };
 
+    // Scroll Encoder Behavior Left and Right
     scroll_vol_encoder: scroll_vol_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         tap-ms = <100>;
     };
-};
-
     
     behaviors {
     };
