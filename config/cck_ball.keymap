@@ -14,7 +14,7 @@
 
 &msc {
     acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <10>;       // 300
+    time-to-max-speed-ms = <50>;       // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -74,7 +74,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        tap-ms = <10>;
+        tap-ms = <50>;
     };
 
     // Scroll Encoder Behavior Left and Right
@@ -118,7 +118,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &trans  &kp LBKT  &kp RBKT  &kp UNDER &kp PIPE &kp BSLH                                     &trans    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
-   &trans    &trans   &trans                  &trans &trans &bootloader    &mkp LCLK &mkp RCLK &kp N0                    &trans   &trans   &trans
+   &trans    &trans   &trans                  &trans &trans &bootloader    &mkp LCLK &kp SPACE &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
