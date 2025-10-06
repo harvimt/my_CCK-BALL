@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1300 // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1400 // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 8   // 10
 
 #include <input/processors.dtsi>
@@ -12,7 +12,7 @@
     input-processors = <&zip_scroll_scaler 2 1>;
 };
 
-&mmv_input_listener {
+&mkp_input_listener {
     input-processor = <&zip_temp_layer 1 400>;
 };
 
