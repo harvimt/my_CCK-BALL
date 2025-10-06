@@ -8,18 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mmv_input_listener { 
-    move_to_ml {
-        input-processors = <&zip_temp_layer 1 400>;
-    };
-};
-
-/ {
-    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <400>;
-    };
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 2 2000>;
 };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
