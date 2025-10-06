@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 5>,
+                = <&macro_tap_time 2>,
                  <&macro_press &kp LSHFT>,
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
@@ -53,18 +53,12 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_test {
+        combo_str {
             timeout-ms = <17>;
-            key-positions = <0 12>;
+            key-positions = <0 2>;
             layers = <0>;
             bindings = <&send_str>;
         };
-        // combo_str {
-        //     timeout-ms = <17>;
-        //     key-positions = <0 2>;
-        //     layers = <0>;
-        //     bindings = <&send_str>;
-        // };
         combo_ctrl_bsp {
             timeout-ms = <17>;
             key-positions = <26 27>;
