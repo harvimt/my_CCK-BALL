@@ -12,6 +12,10 @@
     input-processors = <&zip_scroll_scaler 2 1>;
 };
 
+&mkp_input_listener {
+    input-processor = &zip_temp_layer 1 400;
+};
+
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
