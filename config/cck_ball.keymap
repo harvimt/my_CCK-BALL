@@ -55,7 +55,7 @@
         compatible = "zmk,combos";
         combo_test {
             timeout-ms = <17>;
-            key-positions = <0 7>;
+            key-positions = <0 12>;
             layers = <0>;
             bindings = <&send_str>;
         };
@@ -67,7 +67,7 @@
         // };
         combo_ctrl_bsp {
             timeout-ms = <17>;
-            key-positions = <0 3>;
+            key-positions = <26 27>;
             layers = <1>;
             bindings = <&kp LC(BSPC)>;
         };
