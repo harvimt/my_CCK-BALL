@@ -42,7 +42,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        steps-per-report = <1>;
         tap-ms = <5>;
     };
 
@@ -51,7 +50,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-        steps-per-report = <1>;
         tap-ms = <50>;
     };
     
