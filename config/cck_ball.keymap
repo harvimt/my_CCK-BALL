@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mmv_input_listener {
-    input-processors = <&zip_temp_layer 2 2000>;
+    input-processors = <&zip_scroll_scaler 2 1>;
 };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
