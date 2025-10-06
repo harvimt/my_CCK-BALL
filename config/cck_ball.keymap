@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1400 // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 8   // 10
 
 #include <input/processors.dtsi>
@@ -35,6 +35,17 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
+
+/ {
     // Up/down scrolling encoder behavior
     scroll_vertical_encoder: scroll_vertical_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -61,27 +72,27 @@
         // };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        test_combo {
-            timeout-ms = <17>;
-            key-positions = <0 3>;
-            layers = 0;
-            bindings = <&kp O>;
-        };
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_test {
+    //         timeout-ms = <17>;
+    //         key-positions = <0 3>;
+    //         layers = 0;
+    //         bindings = <&kp O>;
+    //     };
         // combo_str {
         //     timeout-ms = <17>;
         //     key-positions = <0 2>;
         //     layers = 0;
         //     bindings = <&send_string>;
         // };
-        ctrl_bsp_combo {
-            timeout-ms = <17>;
-            key-positions = <27 28>;
-            layers = 1;
-            bindings = <&kp LC(BSCP)>;
-        };
-    };
+    //     combo_ctrl_bsp {
+    //         timeout-ms = <17>;
+    //         key-positions = <27 28>;
+    //         layers = 1;
+    //         bindings = <&kp LC(BSCP)>;
+    //     };
+    // };
 
 
     keymap {
