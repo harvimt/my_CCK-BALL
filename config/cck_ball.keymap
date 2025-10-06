@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
@@ -34,6 +32,8 @@
     tapping-term-ms = <115>;
 };
 
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>, <&zip_temp_layer 1 400>; };
+
 / {
     macros {
         send_str: send_str {
@@ -45,7 +45,6 @@
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
                  <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT &kp ENTER>;
-                
         };
     };
 };
