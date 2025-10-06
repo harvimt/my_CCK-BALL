@@ -69,7 +69,7 @@
             timeout-ms = <17>;
             key-positions = <27 28>;
             layers = <1>;
-            bindings = <&kp LC(BSCP)>;
+            bindings = <&kp LC(BSPC)>;
         };
     };
 };
