@@ -53,12 +53,6 @@
 
      combos {
         compatible = "zmk,combos";
-        combo_test {
-            timeout-ms = <17>;
-            key-positions = <0 3>;
-            layers = <0>;
-            bindings = <&kp O>;
-        };
         combo_str {
             timeout-ms = <17>;
             key-positions = <0 2>;
