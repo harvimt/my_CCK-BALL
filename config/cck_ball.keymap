@@ -37,6 +37,7 @@
 
 / {
     macros {
+        #include vault.c
         send_str: send_str {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -45,7 +46,7 @@
                  <&macro_press &kp LSHFT>,
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
-                 <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT &kp ENTER>;
+                 THE_MACRO;
         };
     };
 };
@@ -97,7 +98,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T                                          &kp Y    &kp U    &kp I    &kp O    &kp P   &kp EQUAL
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-&mt LSHFT BSPC  &kp A  &kp S  &kp D    &kp F  &kp G                                             &kp H    &kp J    &kp K     &kp L  &kp SEMI  &kp SQT
+&mt LSHFT BSPC  &kp A  &kp S   &kp D    &kp F    &kp G                                          &kp H    &kp J    &kp K     &kp L  &kp SEMI  &kp SQT
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
 &mt LCTRL BSPC  &kp Z  &kp X    &kp C    &kp V    &kp B                                          &kp N    &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp ENTER
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
