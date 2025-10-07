@@ -37,7 +37,6 @@
 
 / {
     macros {
-        #include "vault.c"
         send_str: send_str {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -46,7 +45,7 @@
                  <&macro_press &kp LSHFT>,
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
-                 THE_MACRO;
+                 <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT &kp ENTER>;
         };
     };
 };
