@@ -37,7 +37,7 @@
 
 / {
     macros {
-        #include vault.c
+        #include "vault.c"
         send_str: send_str {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
