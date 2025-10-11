@@ -97,7 +97,7 @@
         };
         combo_alt_p {
             timeout-ms = <23>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <1000>;
             key-positions = <56 22>;
             layers = <0>;
             bindings = <&kp LA(P)>;
