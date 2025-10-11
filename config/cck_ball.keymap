@@ -52,7 +52,7 @@
             #binding-cells = <0>;
             wait-ms = <1000>;
             bindings =
-                <&macro_tap_time 5>,
+                <&macro_tap_time 50>,
                 <&macro_tap &mmv MOVE_DOWN>,
                 <&macro_tap &mmv MOVE_UP>, 
                 <&macro_tap &mmv MOVE_RIGHT>, 
