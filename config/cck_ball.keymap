@@ -79,7 +79,7 @@
         };
         combo_forgiving_alt_tab {
             timeout-ms = <100>;
-            slow-release = <1>;
+            // slow-release = true;
             key-positions = <12 51>;
             layers = <0>;
             bindings = <&kp LA(TAB)>;
