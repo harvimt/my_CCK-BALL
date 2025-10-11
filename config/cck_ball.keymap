@@ -52,13 +52,16 @@
             #binding-cells = <0>;
             wait-ms = <1000>;
             bindings =
-                <&macro_tap_time 50>,
-                <&macro_tap &mmv MOVE_DOWN>,
-                <&macro_tap &mmv MOVE_UP>, 
-                <&macro_tap &mmv MOVE_RIGHT>, 
-                <&macro_tap &mmv MOVE_LEFT>, 
-                <&macro_tap &mmv MOVE_DOWN>, 
-                <&macro_tap &mmv MOVE_UP>, 
+                <&macro_tap_time 175>,
+                <&macro_tap &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_DOWN>,
+                <&macro_wait_time 3000>,
+                <&macro_tap &mmv MOVE_UP &mmv MOVE_DOWN>, 
+                <&macro_wait_time 2000>,
+                <&macro_tap &mmv MOVE_RIGHT &mmv MOVE_LEFT>,
+                <&macro_wait_time 500>,
+                <&macro_tap &mmv MOVE_LEFT &mmv MOVE_RIGHT>, 
+                <&macro_tap &mmv MOVE_DOWN &mmv MOVE_UP>, 
+                <&macro_tap &mmv MOVE_UP MOVE_DOWN &mmv MOVE_UP>, 
                 <&macro_tap &mmv MOVE_DOWN>; 
         };
     };
