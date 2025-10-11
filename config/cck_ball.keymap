@@ -53,7 +53,7 @@
             wait-ms = <1>;
             bindings =
                 <&macro_tap_time 1>,
-                <&macro_press &mmv MOVE_DOWN>
+                <&macro_press &mmv MOVE_DOWN>;
         };
     };
 };
