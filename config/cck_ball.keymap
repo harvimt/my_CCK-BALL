@@ -34,18 +34,26 @@
     tapping-term-ms = <115>;
 };
 
-
 / {
     macros {
-        send_str: send_str {
+        macro_send_str: macro_send_str {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <1>;
             bindings
                = <&macro_tap_time 1>,
                  <&macro_press &kp LSHFT>,
                  <&macro_tap &kp A>,
                  <&macro_release &kp LSHFT>,
                  <&macro_tap &kp A &kp N4 &kp N6 &kp N8 &kp N4 &kp N6 &kp N7 &kp N4 &kp N6 &kp N5 &kp N1 &kp N6 &kp DOT &kp ENTER>;
+        };
+        macro_send_mouse: macro_send_mouse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            bindings =
+                <&macro_tap_time 1>,
+                <&macro_press &mmv MOVE_DOWN>
         };
     };
 };
@@ -57,7 +65,7 @@
             timeout-ms = <17>;
             key-positions = <0 2>;
             layers = <0>;
-            bindings = <&send_str>;
+            bindings = <&macro_send_str>;
         };
         combo_ctrl_bsp {
             timeout-ms = <17>;
@@ -83,7 +91,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         tap-ms = <50>;
-    };
+    }
     
     behaviors {};
 
@@ -146,11 +154,11 @@
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┬────────┐
     &kp ESC  &kp F1   &kp F2   &kp N3   &kp N4   &kp F5                                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mt F12 BSPC
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans  &trans  &mkp MB4  &trans   &mkp MB5   &trans                                        &kp F5  &kp F10 &kp UP &kp F11 &kp PSCRN   &trans
+    &trans  &trans  &mkp MB4 &mmv MOVE_UP &mkp MB5 &trans                                         &kp F5  &kp F10 &kp UP &kp F11 &kp PSCRN   &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans  &trans    &trans   &trans   &trans   &trans                                        &kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END &trans
+&trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                             &kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END &trans
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans   &trans   &trans &trans    &trans   &trans                                         &trans &kp PG_DN &kp PG_UP   &trans   &trans   &trans
+    &trans   &trans   &trans &trans    &trans   &trans                                       &mkp RCLK &kp PG_DN &kp PG_UP &trans   &trans   &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
     &trans   &trans   &trans                  &trans &mt LCTRL SPACE &trans &bootloader &trans  &trans                     &trans   &trans   &bt BT_CLR
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
