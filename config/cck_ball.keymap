@@ -61,7 +61,7 @@
                 <&macro_wait_time 500>,
                 <&macro_tap &mmv MOVE_LEFT &mmv MOVE_RIGHT>, 
                 <&macro_tap &mmv MOVE_DOWN &mmv MOVE_UP>, 
-                <&macro_tap &mmv MOVE_UP MOVE_DOWN &mmv MOVE_UP>, 
+                <&macro_tap &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_UP>, 
                 <&macro_tap &mmv MOVE_DOWN>; 
         };
     };
