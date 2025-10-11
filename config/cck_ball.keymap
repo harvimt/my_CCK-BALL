@@ -53,13 +53,13 @@
             wait-ms = <1000>;
             bindings =
                 <&macro_tap_time 5>,
-                <&macro_press &mmv MOVE_DOWN>,
-                <&macro_press &mmv MOVE_UP>, 
-                <&macro_press &mmv MOVE_RIGHT>, 
-                <&macro_press &mmv MOVE_LEFT>, 
-                <&macro_press &mmv MOVE_DOWN>, 
-                <&macro_press &mmv MOVE_UP>, 
-                <&macro_press &mmv MOVE_DOWN>; 
+                <&macro_tap &mmv MOVE_DOWN>,
+                <&macro_tap &mmv MOVE_UP>, 
+                <&macro_tap &mmv MOVE_RIGHT>, 
+                <&macro_tap &mmv MOVE_LEFT>, 
+                <&macro_tap &mmv MOVE_DOWN>, 
+                <&macro_tap &mmv MOVE_UP>, 
+                <&macro_tap &mmv MOVE_DOWN>; 
         };
     };
 };
