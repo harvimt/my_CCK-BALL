@@ -87,9 +87,9 @@
             key-positions = <26 27>;
             layers = <1>;
             bindings = <&kp LC(BSPC)>;
-        };
+    };
         combo_forgiving_alt_tab {
-            timeout-ms = <100>;
+            timeout-ms = <117>;
             slow-release;
             key-positions = <12 51>;
             layers = <0>;
