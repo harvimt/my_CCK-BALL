@@ -92,14 +92,14 @@
         };
         combo_bootLoader_1 {
             timeout-ms = <35>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <150>;
             key-positions = <51 53>;
             layers = <1>;
             bindings = <&bootloader>;
         };
         combo_bootLoader_2 {
             timeout-ms = <35>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <150 >;
             key-positions = <54 56>;
             layers = <3>;
             bindings = <&bootloader>;
@@ -112,7 +112,7 @@
     scroll_vertical_encoder: scroll_vertical_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        bindings = <&kp UP>, <&kp DOWN>;
         tap-ms = <50>;
     };
 
@@ -191,7 +191,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
     &trans   &trans   &trans &trans    &trans   &trans                                       &mkp LCLK &kp PG_DN &kp PG_UP &trans   &trans   &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
-    &trans   &trans   &trans                  &trans &mt LCTRL SPACE &trans   &trans   &trans   &trans                    &trans   &trans   &bt BT_CLR
+    &trans   &trans   &trans                  &trans &mt LCTRL SPACE &trans   &trans  &trans    &trans                     &trans   &trans   &bt BT_CLR
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
