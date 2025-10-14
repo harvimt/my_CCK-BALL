@@ -90,16 +90,9 @@
             layers = <0>;
             bindings = <&kp LA(P)>;
         };
-        combo_bootLoader_1 {
+        combo_bootLoader_right {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
-            key-positions = <51 53>;
-            layers = <1>;
-            bindings = <&bootloader>;
-        };
-        combo_bootLoader_2 {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150 >;
             key-positions = <54 56>;
             layers = <3>;
             bindings = <&bootloader>;
@@ -157,7 +150,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &trans  &kp LBKT  &kp RBKT  &kp UNDER &kp PIPE &kp BSLH                                     &trans    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
-   &trans    &trans   &trans                      &trans &trans &trans       &mkp LCLK &kp SPACE &kp N0                    &trans   &trans   &trans
+   &trans    &trans   &trans                      &trans &trans &bootloader  &mkp LCLK &kp SPACE &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
