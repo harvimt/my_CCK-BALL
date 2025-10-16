@@ -24,7 +24,18 @@
     trigger-period-ms = <16>;
 };
 
-&soft_off { hold-time-ms = <2000>; };
+/ {
+    behaviors {
+        st: space_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Space-Tap";
+        };
+    };
+};
 
 &mt {
     tapping-term-ms = <115>;
@@ -133,7 +144,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
 &mt LCTRL LWIN  &kp Z  &kp X    &kp C    &kp V    &kp B                                          &kp N    &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp ENTER
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
-&mt LCTRL LWIN &kp LWIN &kp LALT      &mt LSHFT BSPC &lt 1 ENTER  &mt LALT DEL &mkp LCLK &lt 3 SPACE &kp SPACE             &kp LALT &kp LEFT &kp RIGHT
+&mt LCTRL LWIN &kp LWIN &kp LALT      &mt LSHFT BSPC &lt 1 ENTER  &mt LALT DEL &mkp LCLK &lt 3 SPACE &st LSHFT SPACE      &kp LALT &kp LEFT &kp RIGHT
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
@@ -150,7 +161,7 @@
 //├────────┼────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┼────────┤
    &trans  &kp LBKT  &kp RBKT  &kp UNDER &kp PIPE &kp BSLH                                     &trans    &kp N1   &kp N2   &kp N3   &kp EQUAL  &trans
 //├────────┼────────┼────────┼────────┴────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┴────────┼────────┼────────┼────────┤
-   &trans    &trans   &trans                      &trans &trans &bootloader  &mkp LCLK &kp SPACE &kp N0                    &trans   &trans   &trans
+   &trans    &trans   &trans                      &trans &trans &mt bootloader DEL  &mkp LCLK &kp SPACE &kp N0                    &trans   &trans   &trans
 //└────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘ └────────┴────────┴────────┘       [=]       └────────┴────────┴────────┘
             >;
         sensor-bindings = <&scroll_vol_encoder>, <&scroll_vertical_encoder>;
