@@ -26,15 +26,6 @@
 
 / {
     behaviors {
-        st: space_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-
-            display-name = "Space-Tap";
-        };
     };
 };
 
@@ -85,24 +76,7 @@
 
 / {
     // Up/down scrolling encoder behavior
-
-    scroll_vertical_encoder: scroll_vertical_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp UP>, <&kp DOWN>;
-
-        tap-ms = <50>;
-    };
-
     // Scroll Encoder Behavior Left and Right
-
-    scroll_vol_encoder: scroll_vol_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-
-        tap-ms = <50>;
-    };
 
     behaviors {
     };
