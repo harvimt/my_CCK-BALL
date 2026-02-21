@@ -122,6 +122,8 @@
 &trans  &kp LBKT      &kp RBKT      &kp LS(UNDER)  &kp LS(PIPE)  &kp BSLH       &boot 0 N0  &kp N1  &kp N2  &kp N3  &kp PG_UP     &kp BSLH
 &trans  &trans        &trans        &trans         &trans        &trans         &trans      &trans  &trans  &trans  &trans        &trans
             >;
+
+            sensor-bindings = <&horz_scroll>, <&vert_scroll>;
         };
 
         layer_2 {
@@ -132,6 +134,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans    &kp LBKT  &kp RBKT        &kp UP     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans    &kp LEFT_BRACE  &kp DOWN   &kp RIGHT_BRACE
             >;
+
+            sensor-bindings = <&horz_scroll>, <&vert_scroll>;
         };
 
         layer_3 {
@@ -142,6 +146,8 @@
 &trans  &bt BT_CLR_ALL  &bt BT_CLR    &bt BT_CLR  &bootloader  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans        &trans      &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&horz_scroll>, <&vert_scroll>;
         };
     };
 
