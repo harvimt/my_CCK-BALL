@@ -123,7 +123,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans    &trans          &trans     &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT       &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans    &kp LBKT  &kp RBKT        &kp UNDER  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK    &trans    &trans    &kp LEFT_BRACE  &kp MINUS  &kp RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans    &kp LEFT_BRACE  &kp MINUS  &kp RIGHT_BRACE
             >;
 
             sensor-bindings = <&horz_scroll>, <&vert_scroll>;
